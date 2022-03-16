@@ -35,6 +35,11 @@ install_sfdx_cli() {
   chmod -R 755  "$BUILD_DIR/vendor/sfdx/cli"
 }
 
+install_sfdx_plugins() {
+  log "Installing sfdmu..."
+  sfdx plugins:install sfdmu
+}
+
 install_jq() {
   log "Downloading jq ..."
   mkdir -p "$BUILD_DIR/vendor/sfdx/jq"
